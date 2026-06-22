@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebrahim Isoladas · Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0e0c1a;
+      color: #f0effe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 460px;
+      width: 100%;
+    }
+
+    /* --- Avatar --- */
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #534AB7, #7F77DD);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+      user-select: none;
+    }
+
+    /* --- Headline --- */
+    .headline {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .headline h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #f0effe;
+      margin-bottom: 6px;
+    }
+    .headline p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #9b94cc;
+      line-height: 1.5;
+    }
+
+    /* --- Card genérico --- */
+    .card {
+      background: #16122a;
+      border: 1px solid rgba(127, 119, 221, 0.2);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      transition: background 0.2s;
+    }
+
+    /* --- Curso Card --- */
+    .course-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(83, 74, 183, 0.18);
+      color: #7F77DD;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .course-badge svg {
+      flex-shrink: 0;
+    }
+    .course-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .course-desc {
+      font-size: 13px;
+      color: #9b94cc;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .course-price {
+      font-size: 26px;
+      font-weight: 600;
+      color: #7F77DD;
+      margin-bottom: 18px;
+    }
+    .course-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 0;
+      background: #534AB7;
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .course-btn:hover {
+      background: #6b62d0;
+    }
+    .course-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* --- Link buttons --- */
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #16122a;
+      border: 1px solid rgba(127, 119, 221, 0.2);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: #f0effe;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .link-btn:hover {
+      background: #1e1838;
+      border-color: rgba(127, 119, 221, 0.4);
+    }
+    .link-btn .icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-btn .icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .link-btn .body {
+      flex: 1;
+      min-width: 0;
+    }
+    .link-btn .label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .link-btn .sublabel {
+      font-size: 12px;
+      color: #9b94cc;
+    }
+    .link-btn .arrow {
+      flex-shrink: 0;
+      color: #9b94cc;
+      transition: transform 0.2s;
+    }
+    .link-btn:hover .arrow {
+      transform: translateX(3px);
+      color: #7F77DD;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #9b94cc;
+      padding: 24px 0 8px;
+      opacity: 0.7;
+    }
+
+    /* --- Responsivo --- */
+    @media (max-width: 480px) {
+      body { padding: 28px 16px; }
+      .card { padding: 20px; }
+      .course-price { font-size: 22px; }
+      .link-btn { padding: 14px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="avatar" aria-label="Avatar Ebrahim Isoladas">EI</div>
+
+    <div class="headline">
+      <h1>Ebrahim Isoladas</h1>
+      <p>Professora de Português mais renomada de Maceió. Português direto ao foco.</p>
+    </div>
+
+    <!-- Card do Curso -->
+    <div class="card">
+      <div class="course-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7F77DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span>Kiwify</span>
+      </div>
+      <h2 class="course-title">Gabaritando COPEVE/AL</h2>
+      <p class="course-desc">COPEVE/AL com resolução de questões direto ao ponto.</p>
+      <div class="course-price">R$ 97,00</div>
+      <a class="course-btn" href="https://pay.kiwify.com.br/Vne3mXY" target="_blank" rel="noopener noreferrer">
+        Quero esse curso
+      </a>
+    </div>
+
+    <!-- Links -->
+    <a class="link-btn" href="https://wa.me/5582994003663" target="_blank" rel="noopener noreferrer">
+      <span class="icon">
+        <svg viewBox="0 0 24 24" fill="#25D366">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </span>
+      <span class="body">
+        <span class="label">WhatsApp</span>
+        <span class="sublabel">(82) 99400-3663</span>
+      </span>
+      <span class="arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </span>
+    </a>
+
+    <a class="link-btn" href="https://www.youtube.com/@ebrahimisoladas" target="_blank" rel="noopener noreferrer">
+      <span class="icon">
+        <svg viewBox="0 0 24 24" fill="#FF0000">
+          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </span>
+      <span class="body">
+        <span class="label">YouTube</span>
+        <span class="sublabel">@ebrahimisoladas · aulas gratuitas</span>
+      </span>
+      <span class="arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </span>
+    </a>
+
+    <a class="link-btn" href="mailto:ebrahimisoladas@gmail.com">
+      <span class="icon">
+        <svg viewBox="0 0 24 24" fill="#EA4335">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </span>
+      <span class="body">
+        <span class="label">E-mail</span>
+        <span class="sublabel">ebrahimisoladas@gmail.com</span>
+      </span>
+      <span class="arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </span>
+    </a>
+
+    <div class="footer">ebrahim isoladas · 2025</div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.course-btn, .link-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        if (this.tagName === 'A' && this.href) {
+          // GA / analytics tracking poderia ser inserido aqui
+        }
+      });
+    });
+  </script>
+</body>
+</html>
