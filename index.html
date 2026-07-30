@@ -300,7 +300,7 @@
     /* ==========================================================
        ALTERNATIVAS — lista quieta, sem competir com a oferta
        ========================================================== */
-    .links { border-bottom: 1px solid var(--rule); margin-bottom: 22px; }
+    .links { border-bottom: 1px solid var(--rule); margin-bottom: 10px; }
     .row {
       display: flex;
       align-items: center;
@@ -353,7 +353,10 @@
       font-size: 13px;
       color: var(--cream-dim);
       text-decoration: none;
-      margin-bottom: 26px;
+      /* padding vertical existe para o alvo de toque chegar a 44px
+         (o texto sozinho dava 21px, abaixo dos 24px da WCAG 2.5.8) */
+      padding: 12px 0;
+      margin-bottom: 14px;
       transition: color 0.18s;
     }
     .members:hover { color: var(--cream); }
@@ -452,21 +455,23 @@
     </section>
 
     <!-- ============ Oferta secundária ============ -->
-    <!-- A venda do e-book acontece dentro da área de membros, não num
-         checkout próprio. Rastreio separado do link "já é aluno" lá embaixo:
-         mesmo destino, intenções diferentes (comprar x acessar). -->
+    <!-- FORA DO AR. Molde pronto para a próxima oferta secundária (e-books ou
+         a volta da turma da COPEVE/AL). Para reativar, descomente o bloco e
+         troque href, data-track, .title e .meta. O CSS já existe.
+         Checkout da COPEVE/AL: https://pay.kiwify.com.br/Vne3mXY (R$ 97)
+
     <p class="eyebrow section-label">Também disponível</p>
-    <a class="alt-offer" href="https://members.kiwify.com/?club=97590bb8-e10d-4e87-9a27-17834c8cbbd3" target="_blank" rel="noopener noreferrer" data-track="ebook">
+    <a class="alt-offer" href="COLOQUE_O_LINK_AQUI" target="_blank" rel="noopener noreferrer" data-track="oferta-secundaria">
       <span class="bubble" aria-hidden="true">+</span>
       <span class="body">
-        <span class="title">E-books</span>
-        <!-- Com preço: <span class="meta">Material de apoio · <span class="nowrap">R$ 00,00</span></span> -->
-        <span class="meta">Compre pela área de membros</span>
+        <span class="title">Nome da oferta</span>
+        <span class="meta">Descrição curta · <span class="nowrap">R$ 00,00</span></span>
       </span>
       <span class="arrow" aria-hidden="true">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </span>
     </a>
+    -->
 
     <!-- ============ As outras alternativas ============ -->
     <p class="eyebrow section-label">Onde me encontrar</p>

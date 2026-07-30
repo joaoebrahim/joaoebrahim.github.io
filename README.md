@@ -7,7 +7,7 @@ Estrutura da página, de cima para baixo:
 
 1. **Lockup da marca** — monograma LE + nome + fio bordô + `Português · Redação · Concursos`
 2. **Oferta principal** — a turma aberta (hoje: SESAU/CEBRASPE 2026, R$ 197)
-3. **Oferta secundária** — e-books, vendidos dentro da área de membros
+3. **Oferta secundária** — hoje fora do ar (o molde está comentado no arquivo)
 4. **Contato** — WhatsApp, YouTube, E-mail
 5. **Área de membros** — para quem já é aluno
 6. **Rodapé**
@@ -44,12 +44,12 @@ Abra `index.html` em qualquer editor de texto.
 
 - **Trocar a turma em cartaz** — busque por `class="offer"`. Altere o título, o texto, a faixa
   `.specs` (órgão / banca / turma), o preço e o `href` do `.cta`.
-- **Trocar a oferta secundária** — busque por `class="alt-offer"`. Hoje ela aponta para a área
-  de membros, porque o e-book é vendido lá dentro e não tem checkout próprio. Se um dia tiver
-  link de pagamento direto, troque o `href` por ele e acrescente os `utm_*`.
-- **Voltar a turma da COPEVE/AL** — ela saiu da página em 30/07/2026 por ainda estar em
-  desenvolvimento. O checkout era `https://pay.kiwify.com.br/Vne3mXY` (R$ 97). Para trazer de
-  volta, use o `.alt-offer` como molde.
+- **Ligar a oferta secundária** — busque por `class="alt-offer"`. O bloco está comentado no
+  arquivo, com o CSS pronto. Descomente e troque `href`, `data-track`, `.title` e `.meta`.
+  - **COPEVE/AL** saiu em 30/07/2026 por ainda estar em desenvolvimento.
+    Checkout: `https://pay.kiwify.com.br/Vne3mXY` (R$ 97).
+  - **E-books** ficaram de fora até a venda estar definida. Eles não têm checkout próprio —
+    a compra acontece dentro da área de membros.
 - **Links de contato** — busque por `class="row"`. Altere o `href`, o `.name` e o `.detail`.
 - **Mensagem pronta do WhatsApp** — está no próprio link, no parâmetro `?text=`
   (precisa estar codificado em URL).
@@ -61,9 +61,9 @@ Abra `index.html` em qualquer editor de texto.
 O link de checkout da turma já sai com `src=linktree` e parâmetros `utm_*`. Troque
 `utm_campaign` por campanha, para saber de onde vem cada venda no relatório da Kiwify.
 
-A área de membros aparece em **dois** lugares — em "Também disponível" (comprar e-book) e no
-rodapé (quem já é aluno). Mesmo destino, intenções diferentes, então cada um tem seu
-`data-track` (`ebook` e `area-de-membros`) para separar no relatório.
+Se a oferta secundária voltar apontando para a área de membros, dê a ela um `data-track`
+diferente do link do rodapé (`area-de-membros`). Mesmo destino, intenções diferentes —
+comprar e entrar no que já comprou — e separar os dois no relatório importa.
 
 O bloco `<script>` no fim do arquivo dispara o clique para o **Meta Pixel** (`fbq`) e o
 **GA4** (`gtag`) usando o atributo `data-track` de cada link. Se nenhum dos dois estiver
