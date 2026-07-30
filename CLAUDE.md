@@ -1,0 +1,82 @@
+# Contexto do projeto
+
+Página de links (bio do Instagram) da **Profa. Luciana Ebrahim** — português, redação e
+concursos, em Maceió/AL. Quem cuida do tráfego é o João (`joaoebrahim`); a professora é a
+cliente. O objetivo da página é vender a turma em cartaz.
+
+Arquivo único: `index.html`. HTML, CSS e JS puros, sem build e sem dependências. Publicada em
+**https://joaoebrahim.github.io/** pelo GitHub Pages, a partir de `main`, na raiz.
+
+## Estado atual e para onde vai
+
+Isto é a **versão inicial**, deliberadamente enxuta. O plano combinado é evoluir para uma
+**página de vendas completa**, com relatos de alunos, resultados e prova social. Ao propor
+melhorias, mire nessa direção.
+
+Oferta em cartaz: **SESAU/CEBRASPE 2026**, R$ 197, checkout `pay.kiwify.com.br/QXO9a83`.
+
+## Identidade visual
+
+A paleta foi **amostrada pixel a pixel do logotipo oficial**, não escolhida por aproximação.
+Está no bloco `:root` do `index.html`. Para mudar a identidade, mexa só ali.
+
+| Token | Valor | Uso |
+| --- | --- | --- |
+| `--wine` | `#882038` | bordô da marca — preenchimentos |
+| `--wine-lift` | `#A8283F` | hover e fios |
+| `--wine-focus` | `#C43D59` | anel de foco |
+| `--cream` | `#F8F8F0` | texto principal |
+| `--cream-dim` | `#D0C8C0` | texto secundário |
+| `--bg` / `--surface` | `#141114` / `#1D181B` | fundo e cartões |
+
+Tipografia: **PT Serif** (display) + **Instrument Sans** (corpo), via Google Fonts.
+
+**Regra que não pode ser quebrada:** bordô **não serve para texto** sobre o fundo escuro
+(2,06:1, reprova na WCAG). Use só como preenchimento, com creme por cima (8,52:1). Se criar
+elemento novo, verifique o contraste antes.
+
+O logotipo oficial é creme sobre escuro — some em fundo claro. Por isso a página é escura. O
+lockup está recriado em HTML/CSS (nítido em qualquer tela, sem peso de imagem).
+
+## Assinatura do design
+
+A **bolha de gabarito**: a turma aberta é a resposta já marcada em bordô, e os outros links
+são alternativas A/B/C que se preenchem no hover e no foco. É o elemento que dá identidade à
+página — preserve ao mexer no layout.
+
+## Regras de conteúdo
+
+- **Não invente prova social.** Nada de número de aprovados, depoimento, garantia ou
+  parcelamento que não tenha sido confirmado. Já foi removido um superlativo não comprovável
+  ("professora mais renomada de Maceió"). Slots existem comentados no HTML para preencher com
+  dado real.
+- **Preço âncora** ("De R$ X por") só se for verdade.
+- A oferta secundária (`.alt-offer`) está comentada no arquivo, servindo de molde. Candidatas:
+  e-books (vendidos dentro da área de membros, sem checkout próprio) e a turma da COPEVE/AL
+  (`pay.kiwify.com.br/Vne3mXY`, R$ 97), que saiu em 30/07/2026 por estar em desenvolvimento.
+
+## Ao alterar
+
+- **Meta tags de URL absoluta** — `canonical`, `og:url` e `og:image` não acompanham mudança de
+  endereço sozinhas. Se o domínio mudar, atualize as três ou o preview no WhatsApp quebra.
+- **Rastreio** — cada link tem `data-track`; o script no fim do arquivo dispara para Meta Pixel
+  (`fbq`) e GA4 (`gtag`), sem quebrar se não estiverem instalados. Nenhum dos dois está
+  instalado ainda.
+- **Alvo de toque** mínimo de 44px de altura em qualquer link novo.
+- **Faixa `.specs`** é apertada: valores curtos. Nome de banca longo quebra a linha.
+- Verifique em **320px e 375px** antes de dar por pronto. Já apareceram três defeitos que só
+  existiam no 320px.
+
+## Domínio e tráfego pago
+
+`github.io` está na Public Suffix List. O Gerenciador de Negócios da Meta **não consegue
+verificá-lo**, então não dá para configurar a Mensuração Agregada de Eventos — o que degrada o
+rastreamento de conversão no iOS. Se a página receber anúncio pago, domínio próprio
+(~R$ 40/ano num `.com.br`) deixa de ser estética e vira requisito.
+
+## Pendências
+
+- [ ] Foto da professora no cabeçalho (hoje é o monograma LE). A troca é uma linha, comentada
+      no arquivo. Aumenta conversão em página de bio.
+- [ ] Meta Pixel / GA4 no `<head>`.
+- [ ] Prova social real, quando houver.
