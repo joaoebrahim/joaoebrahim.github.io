@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Profa. Luciana Ebrahim · Português, Redação e Concursos</title>
-  <meta name="description" content="Português e redação para concursos. Turma SESAU/CEBRASPE 2026 aberta, curso Gabaritando COPEVE/AL, aulas gratuitas no YouTube e contato direto no WhatsApp.">
+  <meta name="description" content="Português e redação para concursos. Turma SESAU/CEBRASPE 2026 aberta, e-books na área de membros, aulas gratuitas no YouTube e contato direto no WhatsApp.">
   <link rel="canonical" href="https://joaoebrahim.github.io/linktree-Ebrahimisoladas/">
 
   <!-- Preview em Instagram / WhatsApp / Telegram.
@@ -395,6 +395,9 @@
     @media (max-width: 360px) {
       .specs > div { padding-left: 10px; }
       .specs dd { font-size: 12px; }
+      /* Sem isso o telefone perde o último dígito e o @ do YouTube corta,
+         porque .detail trunca com reticências em vez de quebrar linha. */
+      .row .detail { font-size: 11.5px; }
     }
   </style>
 </head>
@@ -449,12 +452,16 @@
     </section>
 
     <!-- ============ Oferta secundária ============ -->
+    <!-- A venda do e-book acontece dentro da área de membros, não num
+         checkout próprio. Rastreio separado do link "já é aluno" lá embaixo:
+         mesmo destino, intenções diferentes (comprar x acessar). -->
     <p class="eyebrow section-label">Também disponível</p>
-    <a class="alt-offer" href="https://pay.kiwify.com.br/Vne3mXY?src=linktree&utm_source=instagram&utm_medium=bio&utm_campaign=copeve-al" target="_blank" rel="noopener noreferrer" data-track="gabaritando-copeve">
+    <a class="alt-offer" href="https://members.kiwify.com/?club=97590bb8-e10d-4e87-9a27-17834c8cbbd3" target="_blank" rel="noopener noreferrer" data-track="ebook">
       <span class="bubble" aria-hidden="true">+</span>
       <span class="body">
-        <span class="title">Gabaritando COPEVE/AL</span>
-        <span class="meta">Resolução de questões · <span class="nowrap">R$ 97,00</span></span>
+        <span class="title">E-books</span>
+        <!-- Com preço: <span class="meta">Material de apoio · <span class="nowrap">R$ 00,00</span></span> -->
+        <span class="meta">Compre pela área de membros</span>
       </span>
       <span class="arrow" aria-hidden="true">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
