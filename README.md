@@ -81,6 +81,26 @@ instalado, ele não faz nada e não quebra. Para instalar, cole o snippet do pix
       troque a `div.brand` conforme o comentário no arquivo.
 - [ ] **Prova social** — depoimentos ou aprovações reais. Não inclua números inventados.
 
+## Imagem de preview do link
+
+A `og.png` (1200×630) é o que aparece quando o link é compartilhado no WhatsApp, no Instagram
+e no Telegram. Ela é **gerada por script**, não editada à mão.
+
+Quando a turma mudar, edite o bloco `AJUSTE AQUI` no topo de `tools/og.ps1` — título,
+etiqueta, chamada, preço e endereço — e rode, a partir da raiz do repositório:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\og.ps1
+```
+
+Commite a `og.png` junto. As meta tags no `index.html` não precisam mudar.
+
+O título encolhe sozinho até caber, então nome de turma longo não estoura o cartão.
+
+> `tools/og.ps1` precisa estar salvo em **UTF-8 com BOM**. Sem o BOM, o PowerShell 5.1 lê o
+> arquivo como ANSI e todo acento sai corrompido na imagem. O script detecta isso e aborta
+> antes de gerar, com um aviso dizendo o que fazer.
+
 ## Publicação
 
 A página está no ar em **https://joaoebrahim.github.io/**, publicada pelo GitHub Pages a

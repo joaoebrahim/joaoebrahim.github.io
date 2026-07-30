@@ -55,10 +55,28 @@ página — preserve ao mexer no layout.
   e-books (vendidos dentro da área de membros, sem checkout próprio) e a turma da COPEVE/AL
   (`pay.kiwify.com.br/Vne3mXY`, R$ 97), que saiu em 30/07/2026 por estar em desenvolvimento.
 
+## Imagem de preview (og.png)
+
+A `og.png` é **gerada por script**, não editada à mão. Quando a turma mudar, edite o bloco
+`AJUSTE AQUI` no topo de `tools/og.ps1` (título, etiqueta, chamada, preço, endereço) e rode:
+
+```
+powershell -ExecutionPolicy Bypass -File tools\og.ps1
+```
+
+Depois commite a `og.png` junto. As meta tags não mudam — apontam para o nome do arquivo.
+
+O título encolhe sozinho até caber no cartão, então nome de turma longo não estoura.
+
+`tools/og.ps1` precisa estar em **UTF-8 com BOM**. Sem o BOM o PowerShell 5.1 lê como ANSI e
+todo acento sai corrompido na imagem. O script detecta e aborta antes de gerar, mas se o
+editor salvar sem BOM o problema volta.
+
 ## Ao alterar
 
 - **Meta tags de URL absoluta** — `canonical`, `og:url` e `og:image` não acompanham mudança de
-  endereço sozinhas. Se o domínio mudar, atualize as três ou o preview no WhatsApp quebra.
+  endereço sozinhas. Se o domínio mudar, atualize as três (e o `$Endereco` em `tools/og.ps1`)
+  ou o preview no WhatsApp quebra.
 - **Rastreio** — cada link tem `data-track`; o script no fim do arquivo dispara para Meta Pixel
   (`fbq`) e GA4 (`gtag`), sem quebrar se não estiverem instalados. Nenhum dos dois está
   instalado ainda.
