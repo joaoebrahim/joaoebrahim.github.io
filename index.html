@@ -3,286 +3,546 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ebrahim Isoladas · Links</title>
+
+  <title>Profa. Luciana Ebrahim · Português, Redação e Concursos</title>
+  <meta name="description" content="Português e redação para concursos. Turma SESAU/CEBRASPE 2026 aberta, e-books na área de membros, aulas gratuitas no YouTube e contato direto no WhatsApp.">
+  <link rel="canonical" href="https://joaoebrahim.github.io/linktree-Ebrahimisoladas/">
+
+  <!-- Preview em Instagram / WhatsApp / Telegram.
+       PENDENTE: criar og.png (1200x630) na raiz do repositório.
+       Enquanto o arquivo não existir, o link é compartilhado sem imagem. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Profa. Luciana Ebrahim">
+  <meta property="og:title" content="Profa. Luciana Ebrahim · Português, Redação e Concursos">
+  <meta property="og:description" content="Turma SESAU/CEBRASPE 2026 aberta. Português e redação direto ao foco.">
+  <meta property="og:url" content="https://joaoebrahim.github.io/linktree-Ebrahimisoladas/">
+  <meta property="og:image" content="https://joaoebrahim.github.io/linktree-Ebrahimisoladas/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#141114">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23882038'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia,serif'%20font-size='15'%20font-weight='700'%20fill='%23F8F8F0'%20text-anchor='middle'%3ELE%3C/text%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    /* ==========================================================
+       TOKENS
+       As três cores abaixo foram amostradas do logotipo oficial
+       da Profa. Luciana Ebrahim. Para mudar a identidade visual
+       da página, mexa apenas neste bloco.
+       ========================================================== */
+    :root {
+      --wine:       #882038; /* bordô da marca (preenchimentos)   */
+      --wine-lift:  #A8283F; /* bordô aceso (hover, fios finos)   */
+      --wine-focus: #C43D59; /* anel de foco — precisa de 3:1     */
+      --cream:     #F8F8F0;  /* creme da marca (texto principal)  */
+      --cream-dim: #D0C8C0;  /* cinza quente da marca (secundário)*/
+
+      --bg:        #141114;  /* fundo                             */
+      --surface:   #1D181B;  /* cartões                           */
+      --surface-2: #251E22;  /* cartões em hover                  */
+      --rule:      rgba(248, 248, 240, 0.11);
+
+      --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+      --sans:  'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --shell: 452px;
+    }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html { -webkit-text-size-adjust: 100%; }
+
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: #0e0c1a;
-      color: #f0effe;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 460px;
-      width: 100%;
-    }
-
-    /* --- Avatar --- */
-    .avatar {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #534AB7, #7F77DD);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      font-size: 28px;
-      font-weight: 600;
-      color: #fff;
-      user-select: none;
-    }
-
-    /* --- Headline --- */
-    .headline {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .headline h1 {
-      font-size: 22px;
-      font-weight: 600;
-      color: #f0effe;
-      margin-bottom: 6px;
-    }
-    .headline p {
-      font-size: 14px;
-      font-weight: 400;
-      color: #9b94cc;
-      line-height: 1.5;
-    }
-
-    /* --- Card genérico --- */
-    .card {
-      background: #16122a;
-      border: 1px solid rgba(127, 119, 221, 0.2);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
-      transition: background 0.2s;
-    }
-
-    /* --- Curso Card --- */
-    .course-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(83, 74, 183, 0.18);
-      color: #7F77DD;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 14px;
-    }
-    .course-badge svg {
-      flex-shrink: 0;
-    }
-    .course-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .course-desc {
-      font-size: 13px;
-      color: #9b94cc;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-    .course-price {
-      font-size: 26px;
-      font-weight: 600;
-      color: #7F77DD;
-      margin-bottom: 18px;
-    }
-    .course-btn {
-      display: block;
-      width: 100%;
-      padding: 14px 0;
-      background: #534AB7;
-      color: #fff;
-      text-align: center;
+      font-family: var(--sans);
       font-size: 15px;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .course-btn:hover {
-      background: #6b62d0;
-    }
-    .course-btn:active {
-      transform: scale(0.97);
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--cream);
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+      padding: 38px 20px 26px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* --- Link buttons --- */
-    .link-btn {
+    .shell { width: 100%; max-width: var(--shell); }
+
+    .eyebrow {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+
+    /* ==========================================================
+       ASSINATURA — a bolha de gabarito.
+       A turma aberta é a resposta já marcada em bordô; os outros
+       links são alternativas que se preenchem no hover/foco.
+       ========================================================== */
+    .bubble {
+      flex-shrink: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(248, 248, 240, 0.28);
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--cream-dim);
+      transition: background-color 0.18s, border-color 0.18s, color 0.18s;
+    }
+    .bubble.is-marked {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: var(--cream);
+    }
+
+    /* ==========================================================
+       LOCKUP DA MARCA
+       Recriado em HTML para ficar nítido em qualquer tela e não
+       depender de imagem. Se quiser fidelidade pixel a pixel,
+       exporte o PNG oficial da Kiwify como logo.png e troque a
+       div .brand por:  <img src="logo.png" alt="Profa. Luciana
+       Ebrahim — Português, Redação, Concursos" width="452">
+       ========================================================== */
+    .brand {
       display: flex;
       align-items: center;
       gap: 14px;
-      background: #16122a;
-      border: 1px solid rgba(127, 119, 221, 0.2);
-      border-radius: 14px;
-      padding: 16px 18px;
-      margin-bottom: 12px;
-      text-decoration: none;
-      color: #f0effe;
-      transition: background 0.2s, border-color 0.2s;
+      margin-bottom: 32px;
     }
-    .link-btn:hover {
-      background: #1e1838;
-      border-color: rgba(127, 119, 221, 0.4);
-    }
-    .link-btn .icon {
+    .monogram {
       flex-shrink: 0;
-      width: 28px;
-      height: 28px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--wine);
+      box-shadow: inset 0 0 0 1px rgba(248, 248, 240, 0.2);
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      user-select: none;
+    }
+    .brand-name {
+      font-family: var(--serif);
+      font-size: clamp(16px, 5vw, 20px);
+      font-weight: 700;
+      letter-spacing: 0.005em;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+    .brand-rule {
+      width: 58%;
+      height: 2px;
+      background: var(--wine-lift);
+      margin: 6px 0 5px;
+    }
+    .brand-sub {
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+
+    /* ==========================================================
+       OFERTA PRINCIPAL — o bloco dominante da página
+       ========================================================== */
+    .offer {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--wine);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 32px;
+    }
+    .offer-tag {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+    .offer-title {
+      font-family: var(--serif);
+      font-size: clamp(25px, 7.4vw, 31px);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      text-wrap: balance;
+      margin-bottom: 9px;
+    }
+    .offer-pitch {
+      font-size: 14.5px;
+      color: var(--cream-dim);
+      margin-bottom: 18px;
+    }
+
+    /* Faixa de dados, no registro de edital */
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 11px 0;
+      margin-bottom: 18px;
+    }
+    /* padding-right garante que o valor nunca encoste na divisória seguinte */
+    .specs > div { padding: 0 6px 0 12px; border-left: 1px solid var(--rule); min-width: 0; }
+    .specs > div:first-child { padding-left: 0; border-left: 0; }
+    .specs dt { margin-bottom: 2px; }
+    /* valor muito comprido quebra a linha em vez de invadir a coluna vizinha */
+    .specs dd { font-size: 13px; font-weight: 600; overflow-wrap: break-word; }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 16px;
+    }
+    .price-amount {
+      font-family: var(--serif);
+      font-size: 33px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .price-amount small { font-size: 17px; }
+    .price-note { font-size: 12.5px; color: var(--cream-dim); }
+    /* Preço âncora — use somente se "De R$ X" for verdade.
+       <span class="price-was">R$ 297</span> */
+    .price-was {
+      font-size: 13px;
+      color: var(--cream-dim);
+      text-decoration: line-through;
+    }
+
+    .cta {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 16px 18px;
+      background: var(--wine);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-size: 15.5px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.18s, transform 0.12s;
     }
-    .link-btn .icon svg {
-      width: 24px;
-      height: 24px;
-    }
-    .link-btn .body {
-      flex: 1;
-      min-width: 0;
-    }
-    .link-btn .label {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-    .link-btn .sublabel {
-      font-size: 12px;
-      color: #9b94cc;
-    }
-    .link-btn .arrow {
-      flex-shrink: 0;
-      color: #9b94cc;
-      transition: transform 0.2s;
-    }
-    .link-btn:hover .arrow {
-      transform: translateX(3px);
-      color: #7F77DD;
-    }
+    .cta svg { transition: transform 0.18s; }
+    .cta:hover { background: var(--wine-lift); }
+    .cta:hover svg { transform: translateX(3px); }
+    .cta:active { transform: scale(0.985); }
 
-    /* --- Footer --- */
-    .footer {
+    .reassure {
+      display: block;
       text-align: center;
       font-size: 12px;
-      color: #9b94cc;
-      padding: 24px 0 8px;
-      opacity: 0.7;
+      color: var(--cream-dim);
+      margin-top: 11px;
     }
 
-    /* --- Responsivo --- */
-    @media (max-width: 480px) {
-      body { padding: 28px 16px; }
-      .card { padding: 20px; }
-      .course-price { font-size: 22px; }
-      .link-btn { padding: 14px 14px; }
+    /* --- Oferta secundária: mesma estrutura, peso visual menor --- */
+    .alt-offer {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 32px;
+      text-decoration: none;
+      color: var(--cream);
+      transition: background-color 0.18s, border-color 0.18s;
+    }
+    .alt-offer:hover { background: var(--surface-2); border-color: rgba(248, 248, 240, 0.2); }
+    .alt-offer:hover .bubble,
+    .alt-offer:focus-visible .bubble {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: var(--cream);
+    }
+    .alt-offer .body { flex: 1; min-width: 0; }
+    .alt-offer .title {
+      display: block;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .alt-offer .meta { display: block; font-size: 12.5px; color: var(--cream-dim); }
+    /* preço nunca pode quebrar entre "R$" e o valor */
+    .nowrap { white-space: nowrap; }
+
+    .section-label { margin-bottom: 5px; }
+
+    /* ==========================================================
+       ALTERNATIVAS — lista quieta, sem competir com a oferta
+       ========================================================== */
+    .links { border-bottom: 1px solid var(--rule); margin-bottom: 10px; }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px 2px;
+      border-top: 1px solid var(--rule);
+      text-decoration: none;
+      color: var(--cream);
+      transition: background-color 0.18s;
+    }
+    .row:hover { background: rgba(168, 40, 63, 0.1); }
+    .row:hover .bubble,
+    .row:focus-visible .bubble {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: var(--cream);
+    }
+    .row .glyph {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      color: var(--cream-dim);
+    }
+    .row .glyph svg { width: 19px; height: 19px; }
+    .row .body { flex: 1; min-width: 0; }
+    .row .name { display: block; font-size: 14.5px; font-weight: 600; line-height: 1.3; }
+    .row .detail {
+      display: block;
+      font-size: 12.5px;
+      color: var(--cream-dim);
+      line-height: 1.4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .row .arrow {
+      flex-shrink: 0;
+      color: rgba(248, 248, 240, 0.35);
+      transition: transform 0.18s, color 0.18s;
+    }
+    .row:hover .arrow { transform: translateX(3px); color: var(--cream); }
+
+    /* --- Porta de entrada de quem já comprou --- */
+    .members {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--cream-dim);
+      text-decoration: none;
+      /* padding vertical existe para o alvo de toque chegar a 44px
+         (o texto sozinho dava 21px, abaixo dos 24px da WCAG 2.5.8) */
+      padding: 12px 0;
+      margin-bottom: 14px;
+      transition: color 0.18s;
+    }
+    .members:hover { color: var(--cream); }
+    .members u { text-decoration-color: rgba(248, 248, 240, 0.35); text-underline-offset: 3px; }
+
+    footer {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      opacity: 0.6;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+    }
+
+    /* --- Piso de qualidade --- */
+    :is(a, button):focus-visible {
+      outline: 2px solid var(--wine-focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body { padding: 26px 16px 20px; }
+      .offer { padding: 18px; }
+      .brand { gap: 11px; }
+      .monogram { width: 46px; height: 46px; font-size: 18px; }
+    }
+
+    /* Em telas estreitas a faixa de dados fica apertada: nomes de banca
+       longos (CEBRASPE, FUNDATEC...) encostariam na divisória. */
+    @media (max-width: 360px) {
+      .specs > div { padding-left: 10px; }
+      .specs dd { font-size: 12px; }
+      /* Sem isso o telefone perde o último dígito e o @ do YouTube corta,
+         porque .detail trunca com reticências em vez de quebrar linha. */
+      .row .detail { font-size: 11.5px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="shell">
 
-    <div class="avatar" aria-label="Avatar Ebrahim Isoladas">EI</div>
-
-    <div class="headline">
-      <h1>Ebrahim Isoladas</h1>
-      <p>Professora de Português mais renomada de Maceió. Português direto ao foco.</p>
-    </div>
-
-    <!-- Card do Curso -->
-    <div class="card">
-      <div class="course-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7F77DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-        <span>Kiwify</span>
+    <header class="brand">
+      <div class="monogram" aria-hidden="true">LE</div>
+      <div>
+        <p class="brand-name">Profa. Luciana Ebrahim</p>
+        <div class="brand-rule" aria-hidden="true"></div>
+        <p class="brand-sub">Português · Redação · Concursos</p>
       </div>
-      <h2 class="course-title">Gabaritando COPEVE/AL</h2>
-      <p class="course-desc">COPEVE/AL com resolução de questões direto ao ponto.</p>
-      <div class="course-price">R$ 97,00</div>
-      <a class="course-btn" href="https://pay.kiwify.com.br/Vne3mXY" target="_blank" rel="noopener noreferrer">
-        Quero esse curso
+    </header>
+
+    <!-- ============ A resposta já marcada ============ -->
+    <section class="offer" aria-labelledby="offer-title">
+      <p class="offer-tag">
+        <span class="bubble is-marked" aria-hidden="true"></span>
+        <span class="eyebrow">Turma aberta · Kiwify</span>
+      </p>
+
+      <h1 class="offer-title" id="offer-title">SESAU/CEBRASPE 2026</h1>
+
+      <p class="offer-pitch">Português e redação com foco no jeito que a CEBRASPE cobra. Você treina no padrão da banca antes de sentar na prova.</p>
+
+      <dl class="specs">
+        <div>
+          <dt class="eyebrow">Órgão</dt>
+          <dd>SESAU</dd>
+        </div>
+        <div>
+          <dt class="eyebrow">Banca</dt>
+          <dd>CEBRASPE</dd>
+        </div>
+        <div>
+          <dt class="eyebrow">Turma</dt>
+          <dd>2026</dd>
+        </div>
+      </dl>
+
+      <p class="price">
+        <span class="price-amount"><small>R$</small> 197,00</span>
+        <span class="price-note">à vista</span>
+      </p>
+
+      <a class="cta" href="https://pay.kiwify.com.br/QXO9a83?src=linktree&utm_source=instagram&utm_medium=bio&utm_campaign=sesau-cebraspe-2026" target="_blank" rel="noopener noreferrer" data-track="sesau-cebraspe-2026">
+        Garantir minha vaga
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
-    </div>
+      <small class="reassure">Pagamento seguro pela Kiwify</small>
+    </section>
 
-    <!-- Links -->
-    <a class="link-btn" href="https://wa.me/5582994003663" target="_blank" rel="noopener noreferrer">
-      <span class="icon">
-        <svg viewBox="0 0 24 24" fill="#25D366">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-      </span>
+    <!-- ============ Oferta secundária ============ -->
+    <!-- FORA DO AR. Molde pronto para a próxima oferta secundária (e-books ou
+         a volta da turma da COPEVE/AL). Para reativar, descomente o bloco e
+         troque href, data-track, .title e .meta. O CSS já existe.
+         Checkout da COPEVE/AL: https://pay.kiwify.com.br/Vne3mXY (R$ 97)
+
+    <p class="eyebrow section-label">Também disponível</p>
+    <a class="alt-offer" href="COLOQUE_O_LINK_AQUI" target="_blank" rel="noopener noreferrer" data-track="oferta-secundaria">
+      <span class="bubble" aria-hidden="true">+</span>
       <span class="body">
-        <span class="label">WhatsApp</span>
-        <span class="sublabel">(82) 99400-3663</span>
+        <span class="title">Nome da oferta</span>
+        <span class="meta">Descrição curta · <span class="nowrap">R$ 00,00</span></span>
       </span>
-      <span class="arrow">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-        </svg>
+      <span class="arrow" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </span>
     </a>
+    -->
 
-    <a class="link-btn" href="https://www.youtube.com/@ebrahimisoladas" target="_blank" rel="noopener noreferrer">
-      <span class="icon">
-        <svg viewBox="0 0 24 24" fill="#FF0000">
-          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
-      </span>
-      <span class="body">
-        <span class="label">YouTube</span>
-        <span class="sublabel">@ebrahimisoladas · aulas gratuitas</span>
-      </span>
-      <span class="arrow">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </span>
+    <!-- ============ As outras alternativas ============ -->
+    <p class="eyebrow section-label">Onde me encontrar</p>
+    <nav class="links" aria-label="Contato e redes">
+
+      <a class="row" href="https://wa.me/5582994003663?text=Ol%C3%A1%2C%20professora%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20saber%20mais%20sobre%20a%20turma%20SESAU%2FCEBRASPE%202026." target="_blank" rel="noopener noreferrer" data-track="whatsapp">
+        <span class="bubble" aria-hidden="true">A</span>
+        <span class="glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </span>
+        <span class="body">
+          <span class="name">WhatsApp</span>
+          <span class="detail">Tire sua dúvida · (82) 99400-3663</span>
+        </span>
+        <span class="arrow" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="row" href="https://www.youtube.com/@ebrahimisoladas" target="_blank" rel="noopener noreferrer" data-track="youtube">
+        <span class="bubble" aria-hidden="true">B</span>
+        <span class="glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </span>
+        <span class="body">
+          <span class="name">YouTube</span>
+          <span class="detail">Aulas gratuitas · @ebrahimisoladas</span>
+        </span>
+        <span class="arrow" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="row" href="mailto:ebrahimisoladas@gmail.com" data-track="email">
+        <span class="bubble" aria-hidden="true">C</span>
+        <span class="glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        </span>
+        <span class="body">
+          <span class="name">E-mail</span>
+          <span class="detail">ebrahimisoladas@gmail.com</span>
+        </span>
+        <span class="arrow" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+    </nav>
+
+    <a class="members" href="https://members.kiwify.com/?club=97590bb8-e10d-4e87-9a27-17834c8cbbd3" target="_blank" rel="noopener noreferrer" data-track="area-de-membros">
+      Já é aluno? <u>Acessar área de membros</u>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
 
-    <a class="link-btn" href="mailto:ebrahimisoladas@gmail.com">
-      <span class="icon">
-        <svg viewBox="0 0 24 24" fill="#EA4335">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-      </span>
-      <span class="body">
-        <span class="label">E-mail</span>
-        <span class="sublabel">ebrahimisoladas@gmail.com</span>
-      </span>
-      <span class="arrow">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </span>
-    </a>
-
-    <div class="footer">ebrahim isoladas · 2025</div>
+    <footer>Profa. Luciana Ebrahim · Maceió, AL · <span id="year">2026</span></footer>
 
   </div>
 
   <script>
-    document.querySelectorAll('.course-btn, .link-btn').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        if (this.tagName === 'A' && this.href) {
-          // GA / analytics tracking poderia ser inserido aqui
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Manda o clique para Meta Pixel e GA4 se estiverem instalados.
+       Sem eles, não faz nada e não quebra. */
+    document.querySelectorAll('[data-track]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var id = el.dataset.track;
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'ClickLink', { link: id });
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'select_content', { content_type: 'link', item_id: id });
         }
       });
     });

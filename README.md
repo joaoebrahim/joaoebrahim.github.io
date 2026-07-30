@@ -1,34 +1,93 @@
-# Ebrahim Isoladas — Página de Links
+# Profa. Luciana Ebrahim — Página de Links
 
-Página estilo Linktree para o Instagram da marca **Ebrahim Isoladas**, com card do curso *Gabaritando COPEVE/AL* e botões de contato (WhatsApp, YouTube e E-mail).
+Página de links (estilo Linktree) para a bio do Instagram, em HTML, CSS e JavaScript puros,
+em um único arquivo: `index.html`. Sem build, sem dependências.
+
+Estrutura da página, de cima para baixo:
+
+1. **Lockup da marca** — monograma LE + nome + fio bordô + `Português · Redação · Concursos`
+2. **Oferta principal** — a turma aberta (hoje: SESAU/CEBRASPE 2026, R$ 197)
+3. **Oferta secundária** — hoje fora do ar (o molde está comentado no arquivo)
+4. **Contato** — WhatsApp, YouTube, E-mail
+5. **Área de membros** — para quem já é aluno
+6. **Rodapé**
 
 ## Como abrir localmente
 
-1. Baixe ou clone este repositório
-2. Navegue até a pasta do projeto
-3. Dê um clique duplo no arquivo `index.html` ou arraste-o para o navegador
+Dê um clique duplo em `index.html` ou arraste o arquivo para o navegador. Não precisa instalar nada.
 
-Não é necessário instalar nada — o projeto é HTML, CSS e JavaScript puros.
+## Design
 
-## Como publicar no GitHub Pages (grátis)
+A paleta vem do logotipo oficial. As cores foram amostradas do próprio arquivo e estão no
+bloco `:root` do `index.html` — para mudar a identidade visual da página, mexa só ali.
 
-1. Crie um repositório no GitHub com o nome `ebrahim-isoladas-links`
-2. Faça o push do código:
-   ```bash
-   git remote add origin https://github.com/SEU_USUARIO/ebrahim-isoladas-links.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. No GitHub, vá em **Settings > Pages**
-4. Em **Branch**, selecione `main` e clique em **Save**
-5. Em alguns segundos seu site estará disponível em:
-   `https://SEU_USUARIO.github.io/ebrahim-isoladas-links`
+| Token           | Valor     | Uso                                              |
+| --------------- | --------- | ------------------------------------------------ |
+| `--wine`        | `#882038` | bordô da marca — preenchimentos (CTA, monograma) |
+| `--wine-lift`   | `#A8283F` | bordô aceso — hover e fios finos                 |
+| `--wine-focus`  | `#C43D59` | anel de foco (precisa de 3:1 na WCAG 1.4.11)     |
+| `--cream`       | `#F8F8F0` | texto principal                                  |
+| `--cream-dim`   | `#D0C8C0` | texto secundário                                 |
+| `--bg`          | `#141114` | fundo                                            |
+| `--surface`     | `#1D181B` | cartões                                          |
 
-## Como atualizar os links e o curso
+O bordô **não serve para texto** sobre o fundo escuro (2,06:1, reprova na WCAG). Ele é usado
+apenas como preenchimento, com o creme por cima (8,52:1). Se for criar elementos novos, mantenha
+essa regra.
 
-Edite o arquivo `index.html` com qualquer editor de texto:
+O elemento de assinatura é a **bolha de gabarito**: a turma aberta é a resposta já marcada em
+bordô, e os outros links são alternativas que se preenchem no hover e no foco.
 
-- **Avatar / nome / descrição**: linhas dentro da `<headline>` e da `.avatar`
-- **Card do curso**: busque por `class="card"` — altere título, descrição, preço e link
-- **Botões de link**: busque por `class="link-btn"` — altere o `href`, `.label` e `.sublabel`
-- **Rodapé**: busque por `class="footer"`
+## Como atualizar
+
+Abra `index.html` em qualquer editor de texto.
+
+- **Trocar a turma em cartaz** — busque por `class="offer"`. Altere o título, o texto, a faixa
+  `.specs` (órgão / banca / turma), o preço e o `href` do `.cta`.
+- **Ligar a oferta secundária** — busque por `class="alt-offer"`. O bloco está comentado no
+  arquivo, com o CSS pronto. Descomente e troque `href`, `data-track`, `.title` e `.meta`.
+  - **COPEVE/AL** saiu em 30/07/2026 por ainda estar em desenvolvimento.
+    Checkout: `https://pay.kiwify.com.br/Vne3mXY` (R$ 97).
+  - **E-books** ficaram de fora até a venda estar definida. Eles não têm checkout próprio —
+    a compra acontece dentro da área de membros.
+- **Links de contato** — busque por `class="row"`. Altere o `href`, o `.name` e o `.detail`.
+- **Mensagem pronta do WhatsApp** — está no próprio link, no parâmetro `?text=`
+  (precisa estar codificado em URL).
+- **Preço âncora** ("De R$ 297 por R$ 197") — a classe `.price-was` já existe. Use **somente
+  se for verdade**.
+
+### Rastreio de campanha
+
+O link de checkout da turma já sai com `src=linktree` e parâmetros `utm_*`. Troque
+`utm_campaign` por campanha, para saber de onde vem cada venda no relatório da Kiwify.
+
+Se a oferta secundária voltar apontando para a área de membros, dê a ela um `data-track`
+diferente do link do rodapé (`area-de-membros`). Mesmo destino, intenções diferentes —
+comprar e entrar no que já comprou — e separar os dois no relatório importa.
+
+O bloco `<script>` no fim do arquivo dispara o clique para o **Meta Pixel** (`fbq`) e o
+**GA4** (`gtag`) usando o atributo `data-track` de cada link. Se nenhum dos dois estiver
+instalado, ele não faz nada e não quebra. Para instalar, cole o snippet do pixel no `<head>`.
+
+## Pendências
+
+- [ ] **`og.png` (1200×630)** na raiz do repositório. As meta tags Open Graph já apontam para
+      ele; enquanto o arquivo não existir, o link compartilhado no WhatsApp e no Instagram
+      aparece sem imagem de preview.
+- [ ] **Foto da professora** — hoje o cabeçalho usa o lockup da marca. Uma foto aumenta
+      conversão em página de bio. Exporte um recorte de ~400×520 como `foto.jpg`.
+- [ ] **Logotipo oficial** — o lockup está recriado em HTML/CSS (nítido em qualquer tela e sem
+      peso de imagem). Para fidelidade pixel a pixel, exporte o PNG da Kiwify como `logo.png` e
+      troque a `div.brand` conforme o comentário no arquivo.
+- [ ] **Prova social** — depoimentos ou aprovações reais. Não inclua números inventados.
+
+## Como publicar no GitHub Pages
+
+1. **Settings > Pages**
+2. Em **Source**, escolha `Deploy from a branch`
+3. Em **Branch**, selecione `main` / `(root)` e salve
+
+A página fica em `https://joaoebrahim.github.io/linktree-Ebrahimisoladas/`.
+
+Se trocar o domínio, atualize junto o `<link rel="canonical">` e as meta tags `og:url` e
+`og:image` no `<head>` — elas usam URL absoluta.
