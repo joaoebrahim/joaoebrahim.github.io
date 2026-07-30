@@ -200,10 +200,12 @@
       padding: 11px 0;
       margin-bottom: 18px;
     }
-    .specs > div { padding-left: 12px; border-left: 1px solid var(--rule); }
+    /* padding-right garante que o valor nunca encoste na divisória seguinte */
+    .specs > div { padding: 0 6px 0 12px; border-left: 1px solid var(--rule); min-width: 0; }
     .specs > div:first-child { padding-left: 0; border-left: 0; }
     .specs dt { margin-bottom: 2px; }
-    .specs dd { font-size: 13px; font-weight: 600; }
+    /* valor muito comprido quebra a linha em vez de invadir a coluna vizinha */
+    .specs dd { font-size: 13px; font-weight: 600; overflow-wrap: break-word; }
 
     .price {
       display: flex;
@@ -290,6 +292,8 @@
       line-height: 1.25;
     }
     .alt-offer .meta { display: block; font-size: 12.5px; color: var(--cream-dim); }
+    /* preço nunca pode quebrar entre "R$" e o valor */
+    .nowrap { white-space: nowrap; }
 
     .section-label { margin-bottom: 5px; }
 
@@ -385,6 +389,13 @@
       .brand { gap: 11px; }
       .monogram { width: 46px; height: 46px; font-size: 18px; }
     }
+
+    /* Em telas estreitas a faixa de dados fica apertada: nomes de banca
+       longos (CEBRASPE, FUNDATEC...) encostariam na divisória. */
+    @media (max-width: 360px) {
+      .specs > div { padding-left: 10px; }
+      .specs dd { font-size: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -443,7 +454,7 @@
       <span class="bubble" aria-hidden="true">+</span>
       <span class="body">
         <span class="title">Gabaritando COPEVE/AL</span>
-        <span class="meta">Resolução de questões da banca · R$ 97,00</span>
+        <span class="meta">Resolução de questões · <span class="nowrap">R$ 97,00</span></span>
       </span>
       <span class="arrow" aria-hidden="true">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
