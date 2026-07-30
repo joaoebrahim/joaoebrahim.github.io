@@ -81,13 +81,24 @@ instalado, ele não faz nada e não quebra. Para instalar, cole o snippet do pix
       troque a `div.brand` conforme o comentário no arquivo.
 - [ ] **Prova social** — depoimentos ou aprovações reais. Não inclua números inventados.
 
-## Como publicar no GitHub Pages
+## Publicação
 
-1. **Settings > Pages**
-2. Em **Source**, escolha `Deploy from a branch`
-3. Em **Branch**, selecione `main` / `(root)` e salve
+A página está no ar em **https://joaoebrahim.github.io/**, publicada pelo GitHub Pages a
+partir da branch `main`, na raiz. Todo push para `main` republica sozinho, em 1 a 2 minutos.
 
-A página fica em `https://joaoebrahim.github.io/linktree-Ebrahimisoladas/`.
+O repositório se chama `joaoebrahim.github.io` de propósito: esse nome faz o GitHub servir o
+site na raiz do domínio, sem caminho depois da barra. É o endereço gratuito mais curto
+possível — renomear o repositório quebra isso.
 
-Se trocar o domínio, atualize junto o `<link rel="canonical">` e as meta tags `og:url` e
-`og:image` no `<head>` — elas usam URL absoluta.
+Se um dia trocar de endereço, atualize junto o `<link rel="canonical">` e as meta tags
+`og:url` e `og:image` no `<head>`. Elas usam URL absoluta e não acompanham a mudança
+sozinhas: se ficarem para trás, o preview compartilhado no WhatsApp aponta para o
+endereço errado.
+
+### Sobre domínio próprio e tráfego pago
+
+`github.io` está na Public Suffix List — é domínio compartilhado, você não controla a raiz.
+O Gerenciador de Negócios da Meta **não consegue verificá-lo**. Sem verificação de domínio
+não dá para configurar a Mensuração Agregada de Eventos, o que degrada o rastreamento de
+conversão no iOS. Se a página for receber anúncio pago, um domínio próprio deixa de ser
+estética e vira requisito.
