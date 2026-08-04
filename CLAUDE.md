@@ -7,6 +7,23 @@ cliente. O objetivo da página é vender a turma em cartaz.
 Arquivo único: `index.html`. HTML, CSS e JS puros, sem build e sem dependências. Publicada em
 **https://joaoebrahim.github.io/** pelo GitHub Pages, a partir de `main`, na raiz.
 
+## Esta é a cópia de portfólio
+
+A página existe em **dois lugares**, de propósito:
+
+| Repositório | Endereço | Papel |
+| --- | --- | --- |
+| `EbrahimIsoladas/ebrahimisoladas.github.io` | ebrahimisoladas.github.io | **oficial** — link da bio |
+| `joaoebrahim/joaoebrahim.github.io` | joaoebrahim.github.io | esta aqui, portfólio do João |
+
+Esta cópia é projeto pessoal do João e **fica no ar**. Não apague.
+
+O `canonical` aponta para o repositório oficial, para as duas não competirem na busca. As
+tags `og:` continuam apontando para **este** domínio: quem compartilha o link do portfólio
+deve ver o portfólio. Essa divergência é intencional — não "conserte".
+
+Ao alterar conteúdo, replique nos dois repositórios.
+
 ## Estado atual e para onde vai
 
 Isto é a **versão inicial**, deliberadamente enxuta. O plano combinado é evoluir para uma
