@@ -18,8 +18,8 @@
 
 # ------------------------------ AJUSTE AQUI ---------------------------
 $Titulo   = 'SESAU/CEBRASPE 2026'
-$Etiqueta = 'TURMA ABERTA  ·  KIWIFY'
-$Chamada  = 'Português e redação no padrão da banca.'
+$Etiqueta = 'CURSO ONLINE  ·  KIWIFY'
+$Chamada  = '20 aulas gravadas, no padrão da banca.'
 $Preco    = '197,00'
 $Endereco = 'joaoebrahim.github.io'
 # ----------------------------------------------------------------------
